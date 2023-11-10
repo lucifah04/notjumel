@@ -1,0 +1,80 @@
+.seccion-grilla{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/*Pagina "sobre mi"*/
+.cabecera, .navbar, .seccion, .seccion2, .articulo, .pie{
+    padding: 10px;
+    border: 1px solid;
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3, 350px); /*1fr=1 fraccion del contenedor*/
+    grid-template-rows: 120px 40px repeat(2,250px) 60px;
+    row-gap: 16px;
+    column-gap: 5px;
+    gap: 16px 5px; /*En vez de usar row-gap y column-gap se puede usar esto para resumir*/
+    grid-template-areas: 
+    "header header header"
+    "navbar navbar navbar"
+    "seccion articulo articulo" /*tmb puedo usar seccion seccion articulo y el layout cambia*/
+    "seccion seccion2 seccion2"
+    "pie pie pie"
+    ;
+
+}
+.cabecera{
+    background-color: blueviolet;
+    background-repeat: no-repeat;
+    background-position: center -200px;
+    background-size: cover;
+    color: beige;
+    grid-area: header;
+}
+/*barra de navegacion*/
+.navbar{
+    grid-area: navbar;
+    background-color: blanchedalmond;
+    grid-column-start: 2; /*le digo donde quiero que comience*/
+}
+.navbar ul{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-around;
+    list-style: none;
+}
+/*main body de la pagina*/
+.seccion{
+    grid-area: seccion;
+}
+.articulo{
+    grid-area: articulo
+
+}
+.seccion2{
+    grid-area: seccion2;
+}
+/*pie de pagina*/
+.pie{
+    grid-area: pie;
+}
+/*
+- queries -
+@media(max-width:992px){
+    body{ 
+        background-color: blue;
+    }
+}
+@media(max-width:800px){
+    body{ 
+        background-color: rgb(172, 30, 139);
+    }
+} 
+*/
