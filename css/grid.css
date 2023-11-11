@@ -65,6 +65,60 @@
 .pie{
     grid-area: pie;
 }
+/*  tienda.html */
+.grid_container {
+    display: grid;
+    gap: 10px;
+    background-color: #6e0e0e;
+    padding: 30px;
+    border-radius: 15px;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 15px;
+    height: 300px;
+}
+.online_shop {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 25px;
+    position: relative;
+    max-height: 100px;
+}
+.item1 { 
+    grid-column: 1;
+    grid-row: 2 / span 3;
+    height: auto;
+}
+.item2 {
+    grid-column: 2 ;
+    grid-row: 2;
+}
+.item3 {
+    grid-column: 3;
+    grid-row: 2;
+}
+.item4 {
+    grid-column: 4 ;
+    grid-row: 2;
+}
+.item5 {
+    grid-column: 2;
+    grid-row: 4;
+}
+.item6 {
+    grid-column: 3;
+    grid-row: 4;
+}
+.item7 {
+    grid-column: 4;
+    grid-row: 4;
+}
+
 /*
 - queries -
 @media(max-width:992px){
